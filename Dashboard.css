@@ -1,0 +1,796 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background-color: #FAFAFA;
+    background-repeat: no-repeat;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* IMPORT FONT */
+
+@font-face {
+    font-family: NexaE;
+    src: url(./Font/Nexa-ExtraLight.ttf);
+}
+@font-face {
+    font-family: NexaH;
+    src: url(./Font/Nexa-Heavy.ttf);
+}
+@font-face {
+    font-family: MontserratR;
+    src: url(./Font/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: MontserratM;
+    src: url(./Font/Montserrat-Medium.ttf);
+}
+@font-face {
+    font-family: MontserratSB;
+    src: url(./Font/Montserrat-SemiBold.ttf);
+}
+@font-face {
+    font-family: MontserratB;
+    src: url(./Font/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: Sephora;
+    src: url(./Font/Sephora.ttf);
+}
+@font-face {
+    font-family: SephoraB;
+    src: url(./Font/Sephora-Bold.ttf);
+}
+@font-face {
+    font-family: Quantify;
+    src: url(./Font/Quantify.ttf);
+}
+@font-face {
+    font-family: Petrov;
+    src: url(./Font/PetrovSans-Bold.ttf);
+}
+
+/* NAVBAR DESIGN */
+
+.Header {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+}
+
+.Header .Navbar {
+    height: 60px;
+    display: flex;
+    padding: 0 25px;
+    align-items: center;
+    background-color: #101010;
+    justify-content: space-between;
+    border-bottom: solid 1px #252525; 
+}
+
+/* NAVBAR LOGO */
+
+.Header .Navbar .Navbar-Left p { 
+    font-size: 18px;
+    font-family: Sephora;
+    letter-spacing: 0.5px;
+    background: -webkit-linear-gradient(0deg, #22C1C3, #FDBB2D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Header .Navbar .Navbar-Left p::selection {
+    background-color: transparent;
+}
+
+/* NAVBAR BUTTON */
+
+.Header .Navbar .Navbar-Right {
+    gap: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.Header .Navbar .Navbar-Right a {
+    gap: 5px;
+    display: flex;
+    font-size: 10px;
+    color: #FFFFFF75;
+    text-decoration: none;
+    align-items: center;
+    letter-spacing: 0.15px;
+    font-family: MontserratM;
+    transition: all 0.5s ease;
+}
+
+.Header .Navbar .Navbar-Right a.Active,
+.Header .Navbar .Navbar-Right a:hover {
+    color: #FDBB2D;
+}
+
+.Header .Navbar .Navbar-Right a::selection,
+.Header .Navbar .Navbar-Right a:focus-within {
+    outline: none;
+    background-color: transparent;
+}
+
+.Header .Navbar .Navbar-Right a .Line {
+    width: 2px;
+    height: 10px;
+    border-radius: 1px;
+    background-color: transparent;
+}
+
+.Header .Navbar .Navbar-Right a .Line#Active {
+    background-color: #FDBB2D;
+}
+
+.Header .Navbar .Navbar-Right a:nth-child(5) {
+    width: 100px;
+    height: 25px;
+    border: none;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    border-radius: 6px;
+    color: #FFFFFF75;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;   
+    background-color: #252525;
+}
+
+.Header .Navbar .Navbar-Right a:nth-child(5):hover {
+    color: #FDBB2D;
+    box-shadow: 0 0 5px #FDBB2D;
+}
+
+/* DROPDOWN FOR RESPONSIVE */
+
+.Header .Navbar .Dropdown {
+    display: none;
+}
+
+.Header .Navbar .Dropdown i {
+    font-size: 22px;
+    color: #FFFFFF;
+    transition: all 0.5s ease;
+}
+
+.Header .Navbar .Dropdown:hover i {
+    color: #FDBB2D
+}
+
+/* DASHBOARD DESIGN */
+
+.Dashboard {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* COURSES DESIGN */
+
+.Dashboard .Courses {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding-top: 60px;
+    flex-direction: column;
+    background-color: #101010;
+}
+
+/* GREETING & REGSTER BUTTON DESIGN */
+
+.Dashboard .Courses .Header-Courses {
+    display: flex;
+    align-items: center;
+    padding: 20px 30px 15px;
+    justify-content: space-between;
+}
+
+.Dashboard .Courses .Header-Courses .Greet {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Dashboard .Courses .Header-Courses .Greet p::selection {
+    background-color: transparent;
+}
+
+.Dashboard .Courses .Header-Courses .Greet p:nth-child(1) {
+    font-size: 12px;
+    color: #656565;
+    letter-spacing: 0.25px;
+    font-family: MontserratSB;
+}
+
+.Dashboard .Courses .Header-Courses .Greet p:nth-child(2) {
+    font-size: 24px;
+    color: #FFFFFF;
+    margin-left: -1px;
+    letter-spacing: 0.15px;
+    font-family: MontserratSB;
+}
+
+.Dashboard .Courses .Header-Courses .Register {
+    display: flex;
+    cursor: pointer;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    background-color: #252525;
+}
+
+.Dashboard .Courses .Header-Courses .Register a {
+    height: 25px;
+    width: 150px;
+    display: flex;
+    font-size: 10px;
+    color: #FFFFFF;
+    align-items: center;
+    text-decoration: none;
+    letter-spacing: 0.25px;
+    justify-content: center;
+    font-family: MontserratM;
+    transition: all 0.5s ease;
+}
+
+.Dashboard .Courses .Header-Courses .Register a:focus-within {
+    outline: none;
+}
+.Dashboard .Courses .Header-Courses .Register a::selection {
+    background-color: transparent;
+}
+
+.Dashboard .Courses .Header-Courses .Register:hover {
+    color: #FDBB2D;
+    box-shadow: 0 0 5px #FDBB2D;
+}
+
+.Dashboard .Courses .Header-Courses .Register:hover a {
+    color: #FDBB2D;
+}
+
+/* CONTENT COURSES */
+
+.Dashboard .Courses .Content-Courses {
+    display: grid;
+    grid-gap: 15px;
+    align-items: center;
+    margin: 0 30px 30px;
+    border-radius: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+}
+
+.Dashboard .Courses .Content-Courses .Card-Courses {
+    gap: 15px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+}
+
+.Dashboard .Courses .Content-Courses .Card-Courses .Content-Card {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 0 10px 20px;
+}
+
+.Dashboard .Courses .Content-Courses .Card-Courses .Content-Card p::selection {
+    background-color: transparent;
+}
+
+.Dashboard .Courses .Content-Courses .Card-Courses .Content-Card p:nth-child(1) {
+    font-size: 16px;
+    color: #101010;
+    font-family: Petrov;
+}
+
+.Dashboard .Courses .Content-Courses .Card-Courses .Content-Card p:nth-child(2) {
+    font-size: 10px;
+    color: #101010;
+    margin-top: -2px;
+    font-family: MontserratSB;
+}
+
+.Dashboard .Courses .Content-Courses .Card-Courses .Icon-Card {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    font-size: 14px;
+    color: #101010;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 20px 10px 0;
+    background-color: #FDBB2D;
+}
+
+/* STATISTIC */
+
+.Statistic {
+    display: grid;
+    padding: 30px;
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(min(600px, 100%), 1fr)); 
+}
+
+/* BARCHART */
+
+.Statistic .Barchart {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    align-content: space-between;
+    box-shadow: 0 0 5px #C5C5C5;
+    justify-content: space-between;
+}
+
+.Statistic .Barchart .Header-Barchart {
+    height: 25px;
+    display: flex;
+    align-items: center;
+    margin: 20px 25px 10px;
+    justify-content: space-between;
+}
+
+.Statistic .Barchart .Header-Barchart p {
+    font-size: 14px;
+    color: #101010;
+    font-family: MontserratB;
+}
+
+.Statistic .Barchart .Header-Barchart p::selection {
+    background-color: transparent;
+}
+
+/* BUTTON DOWNLOAD */
+
+.Statistic .Barchart .Header-Barchart a {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    border-radius: calc(30px/5);
+    justify-content: flex-start;
+    background-color: #FDBB2D;
+}
+
+.Statistic .Barchart .Header-Barchart a i {
+    width: 100%;
+    display: flex;
+    font-size: 12px;
+    color: #A26840;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.Statistic .Barchart .Header-Barchart a p {
+    right: 0%;
+    width: 0%;
+    opacity: 0;   
+    font-size: 10px;
+    color: #101010;
+    position: absolute;
+    transition: all 0.5s ease;
+}
+
+.Statistic .Barchart .Header-Barchart a:hover {
+    width: 85px;
+}
+
+.Statistic .Barchart .Header-Barchart a:hover i {
+    width: 50%;
+    color: #101010;
+}
+
+.Statistic .Barchart .Header-Barchart a:hover p {
+    width: 60%;
+    opacity: 1;
+}
+
+.Statistic .Barchart .Header-Barchart a:active {
+    background-color: #E9A617;
+}
+
+/* LINE */
+
+.Statistic .Barchart .Line1 {
+    height: 1px;
+    margin: 0 25px 20px;
+    background-color: #ECEDEC;
+}
+
+/* BAR DESIGN */
+
+.Statistic .Barchart .Content-Barchart {
+    gap: 15px;
+    display: flex;
+    height: 250px;  
+    margin: 0 30px 20px;
+}
+
+.Statistic .Barchart .Content-Barchart .Content-Barchart-Left {
+    width: 70%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.Statistic .Barchart .Content-Barchart .Content-Barchart-Left .Wrapper-Bar {
+    gap: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+}
+
+.Statistic .Barchart .Content-Barchart .Content-Barchart-Left .Wrapper-Bar .Background-Bar {
+    width: 24px;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    border-radius: 6px;
+    background-color: #F5F5F5;
+}
+
+.Statistic .Barchart .Content-Barchart .Wrapper-Bar .Background-Bar .Bar {
+    width: 100%;
+    height: 70%;
+    border-radius: 6px;
+    background-color: #FDBB2D;
+}
+
+.Statistic .Barchart .Content-Barchart .Wrapper-Bar p {
+    font-size: 8px;
+    color: #101010;
+    font-family: MontserratB;
+}
+
+.Statistic .Barchart .Content-Barchart .Wrapper-Bar p::selection {
+    background-color: transparent;
+}
+
+/* INFO BAR DESIGN */
+
+.Statistic .Barchart .Content-Barchart .Content-Barchart-Right {
+    width: 30%;
+    display: flex;
+    margin: 0 0 20px;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+.Statistic .Barchart .Content-Barchart .Content-Barchart-Right .Box-Info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Statistic .Barchart .Content-Barchart .Content-Barchart-Right .Box-Info .Mark {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.Statistic .Barchart .Content-Barchart .Content-Barchart-Right .Box-Info .Mark .Line {
+    width: 4px;
+    height: 12px;
+    border-radius: 2px;
+    background-color: #FDBB2D;
+}
+
+.Statistic .Barchart .Content-Barchart .Content-Barchart-Right .Box-Info .Mark p {
+    gap: 5px;
+    display: flex;
+    font-size: 10px;
+    color: #101010;
+    align-items: center;
+    font-family: MontserratSB;
+}
+
+.Statistic .Barchart .Content-Barchart .Content-Barchart-Right .Box-Info .Mark p::selection {
+    background-color: transparent;
+}
+
+.Statistic .Barchart .Content-Barchart .Content-Barchart-Right .Box-Info p {
+    font-size: 10px;
+    color: #101010;
+    font-family: MontserratSB;
+}
+
+.Statistic .Barchart .Content-Barchart .Content-Barchart-Right .Box-Info p::selection {
+    background-color: transparent;
+}
+
+/* RECENT ACTIVITY */
+
+.Statistic .Recent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: start;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px #C5C5C5;
+}
+
+.Statistic .Recent .Header-Recent {
+    height: 25px;
+    display: flex;
+    align-items: center;
+    margin: 20px 25px 10px;
+    justify-content: space-between;
+}
+
+.Statistic .Recent .Header-Recent p {
+    font-size: 14px;
+    color: #101010;
+    font-family: MontserratB;
+}
+
+.Statistic .Recent .Header-Recent p::selection {
+    background-color: transparent;
+}
+
+.Statistic .Recent .Header-Recent .Filter {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.35s ease;
+    border-radius: calc(30px/5);
+    justify-content: flex-start;
+}
+
+.Statistic .Recent .Header-Recent .Filter {
+    gap: 5px;
+    display: flex; 
+    align-items: center;
+}
+
+.Statistic .Recent .Header-Recent .Filter button {
+    gap: 5px;
+    border: none;
+    height: 25px;
+    width: 100px;
+    display: flex;
+    font-size: 10px;
+    cursor: pointer;
+    color: #A26840;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    font-family: MontserratB;
+    transition: all 0.35s ease;
+    background-color: #FDBB2D;   
+}
+
+.Statistic .Recent .Header-Recent .Filter button:hover {
+    color: #101010;
+    background-color: #E9A617;
+}
+
+.Statistic .Recent .Header-Recent .Filter button::selection {
+    background-color: transparent;
+}
+
+.Statistic .Recent .Line1 {
+    height: 1px;
+    margin: 0 25px 0;
+    background-color: #ECEDEC;
+}
+
+/* INFO USER IN TODAY ACTIVITY */
+
+.Statistic .Recent .Content-Recent {
+    display: flex;
+    height: 250px;
+    overflow: auto;
+    margin: 0 30px 20px;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
+
+.Statistic .Recent .Content-Recent::-webkit-scrollbar {
+    display: none;
+}
+
+.Statistic .Recent .Content-Recent .Box-Recent {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    justify-content: space-between;
+    border-bottom: solid 1px #EAEAEA;
+} 
+
+.Statistic .Recent .Content-Recent .Box-Recent .Info-User {
+    width: 50%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Statistic .Recent .Content-Recent .Box-Recent .Info-User p::selection {
+    background-color: transparent;
+}
+
+.Statistic .Recent .Content-Recent .Box-Recent .Info-User p:nth-child(1) {
+    font-size: 12px;
+    color: #101010;
+    letter-spacing: 0.15px;
+    font-family: MontserratB;
+}
+
+.Statistic .Recent .Content-Recent .Box-Recent .Info-User p:nth-child(2) {
+    font-size: 10px;
+    color: #656565;
+    font-family: MontserratM;
+}
+
+/* INFO ACTIVITY IN TODAY ACTIVITY */
+
+.Statistic .Recent .Content-Recent .Box-Recent .Activity {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Statistic .Recent .Content-Recent .Box-Recent .Activity p::selection {
+    background-color: transparent;
+}
+
+.Statistic .Recent .Content-Recent .Box-Recent .Activity p {
+    width: 30%;
+    height: 18px;
+    display: flex;
+    font-size: 10px;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    font-family: MontserratSB;
+}
+
+.Statistic .Recent .Content-Recent .Nothing {
+    height: 100%;
+    display: flex;
+    font-size: 10px;
+    color: #C5C5C5;
+    align-items: center;
+    letter-spacing: 0.15px;
+    font-family: MontserratM;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1000px) {
+    .Header .Navbar .Navbar-Right {
+        left: 0;
+        top: 35px;
+        opacity: 0;
+        z-index: -1;  
+        display: flex;
+        margin: 0 15px;
+        align-items: start;
+        position: absolute;
+        height: fit-content;
+        flex-direction: column;
+        padding: 40px 30px 25px;
+        transition: all 0.5s ease;
+        background-color: #141414;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 0 5px #101010;
+    }
+    .Header .Navbar .Navbar-Right a {
+        margin: 0 auto;
+    }
+    .Header .Navbar .Navbar-Right.Active {
+        top: 60px;
+        opacity: 1;
+    }
+    .Header .Navbar .Dropdown {
+        display: flex;
+    }
+    .Header .Navbar .Dropdown.Active i {
+        color: #FDBB2D;
+    }
+    .Dashboard .Courses .Header-Courses .Register {
+        display: none;
+    }
+    .Statistic .Barchart .Header-Barchart p {
+        font-size: 12px;
+    }
+    .Statistic .Barchart .Header-Barchart a {
+        height: 20px;
+        width: 20px;
+        font-size: 8px;
+    }
+    .Statistic .Barchart .Header-Barchart a i {
+        font-size: 10px;
+    }
+    .Statistic .Recent .Header-Recent p {
+        font-size: 12px;
+    }
+    .Statistic .Recent .Header-Recent .Filter button {
+        width: 60px;
+        height: 16px;
+        font-size: 6px;
+    }
+    .Statistic .Recent .Header-Recent .Filter button i {
+        font-size: 6px;
+    }
+    .Statistic .Barchart .Content-Barchart {
+        flex-wrap: wrap;
+    }
+    .Statistic .Barchart .Content-Barchart .Content-Barchart-Left {
+        width: 100%;
+    }
+    .Statistic .Barchart .Content-Barchart .Content-Barchart-Left .Wrapper-Bar .Background-Bar {
+        width: 12px;
+    }
+    .Statistic .Barchart .Content-Barchart .Content-Barchart-Left .Wrapper-Bar p {
+        font-size: 6px;
+    }
+    .Statistic .Barchart .Content-Barchart .Content-Barchart-Right {
+        width: 100%;
+    }
+    .Statistic .Barchart .Content-Barchart .Content-Barchart-Right .Box-Info .Mark p {
+        font-size: 8px;
+    }
+    .Statistic .Barchart .Content-Barchart .Content-Barchart-Right .Box-Info p {
+        font-size: 8px;
+    }
+    .Statistic .Recent .Content-Recent .Box-Recent .Activity p:nth-child(2) {
+        width: 50%; 
+        justify-content: end;
+    }
+    .Statistic .Recent .Content-Recent .Box-Recent .Activity p:nth-child(3) {
+        display: none;
+    }
+    .Statistic .Recent .Content-Recent .Box-Recent .Info-User p:nth-child(1) {
+        font-size: 10px;
+    }
+    .Statistic .Recent .Content-Recent .Box-Recent .Info-User p:nth-child(2) {
+        font-size: 8px;
+    }
+    .Statistic .Recent .Content-Recent .Box-Recent .Activity p:nth-child(1),
+    .Statistic .Recent .Content-Recent .Box-Recent .Activity p:nth-child(2) {
+        font-size: 8px;
+    }  
+}

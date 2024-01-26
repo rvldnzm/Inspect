@@ -1,0 +1,696 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background-color: #FAFAFA;
+    background-repeat: no-repeat;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* IMPORT FONT */
+
+@font-face {
+    font-family: NexaE;
+    src: url(./Font/Nexa-ExtraLight.ttf);
+}
+@font-face {
+    font-family: NexaH;
+    src: url(./Font/Nexa-Heavy.ttf);
+}
+@font-face {
+    font-family: MontserratR;
+    src: url(./Font/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: MontserratM;
+    src: url(./Font/Montserrat-Medium.ttf);
+}
+@font-face {
+    font-family: MontserratSB;
+    src: url(./Font/Montserrat-SemiBold.ttf);
+}
+@font-face {
+    font-family: MontserratB;
+    src: url(./Font/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: Sephora;
+    src: url(./Font/Sephora.ttf);
+}
+@font-face {
+    font-family: SephoraB;
+    src: url(./Font/Sephora-Bold.ttf);
+}
+@font-face {
+    font-family: Quantify;
+    src: url(./Font/Quantify.ttf);
+}
+@font-face {
+    font-family: Petrov;
+    src: url(./Font/PetrovSans-Bold.ttf);
+}
+
+/* NAVBAR DESIGN */
+
+.Header {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+}
+
+.Header .Navbar {
+    height: 60px;
+    display: flex;
+    padding: 0 25px;
+    align-items: center;
+    background-color: #101010;
+    justify-content: space-between;
+    border-bottom: solid 1px #252525; 
+}
+
+/* NAVBAR LOGO */
+
+.Header .Navbar .Navbar-Left p { 
+    font-size: 18px;
+    font-family: Sephora;
+    letter-spacing: 0.5px;
+    background: -webkit-linear-gradient(0deg, #22C1C3, #FDBB2D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Header .Navbar .Navbar-Left p::selection {
+    background-color: transparent;
+}
+
+/* NAVBAR BUTTON */
+
+.Header .Navbar .Navbar-Right {
+    gap: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.Header .Navbar .Navbar-Right a {
+    gap: 5px;
+    display: flex;
+    font-size: 10px;
+    color: #FFFFFF75;
+    text-decoration: none;
+    align-items: center;
+    letter-spacing: 0.15px;
+    font-family: MontserratM;
+    transition: all 0.5s ease;
+}
+
+.Header .Navbar .Navbar-Right a.Active,
+.Header .Navbar .Navbar-Right a:hover {
+    color: #FDBB2D;
+}
+
+.Header .Navbar .Navbar-Right a::selection,
+.Header .Navbar .Navbar-Right a:focus-within {
+    outline: none;
+    background-color: transparent;
+}
+
+.Header .Navbar .Navbar-Right a .Line {
+    width: 2px;
+    height: 10px;
+    border-radius: 1px;
+    background-color: transparent;
+}
+
+.Header .Navbar .Navbar-Right a .Line#Active {
+    background-color: #FDBB2D;
+}
+
+.Header .Navbar .Navbar-Right a:nth-child(5) {
+    width: 100px;
+    height: 25px;
+    border: none;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    border-radius: 6px;
+    color: #FFFFFF75;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;   
+    background-color: #252525;
+}
+
+.Header .Navbar .Navbar-Right a:nth-child(5):hover {
+    color: #FDBB2D;
+    box-shadow: 0 0 5px #FDBB2D;
+}
+
+/* DROPDOWN FOR RESPONSIVE */
+
+.Header .Navbar .Dropdown {
+    display: none;
+}
+
+.Header .Navbar .Dropdown i {
+    font-size: 22px;
+    color: #FFFFFF;
+    transition: all 0.5s ease;
+}
+
+.Header .Navbar .Dropdown:hover i {
+    color: #FDBB2D
+}
+
+/* DASHBOARD DESIGN */
+
+.Attendance {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* COURSES DESIGN */
+
+.Attendance .Courses {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding-top: 60px;
+    flex-direction: column;
+    background-color: #101010;
+}
+
+/* GREETING & REGSTER BUTTON DESIGN */
+
+.Attendance .Courses .Header-Courses {
+    display: flex;
+    align-items: center;
+    padding: 20px 30px 15px;
+    justify-content: space-between;
+}
+
+.Attendance .Courses .Header-Courses .Greet {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Attendance .Courses .Header-Courses .Greet p::selection {
+    background-color: transparent;
+}
+
+.Attendance .Courses .Header-Courses .Greet p:nth-child(1) {
+    font-size: 12px;
+    color: #656565;
+    letter-spacing: 0.25px;
+    font-family: MontserratSB;
+}
+
+.Attendance .Courses .Header-Courses .Greet p:nth-child(2) {
+    font-size: 24px;
+    color: #FFFFFF;
+    margin-left: -1px;
+    letter-spacing: 0.15px;
+    font-family: MontserratSB;
+}
+
+.Attendance .Courses .Header-Courses .Clock {
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Attendance .Courses .Header-Courses .Clock p {
+    color: #FFFFFF;
+}
+
+.Attendance .Courses .Content-Courses {
+    display: grid;
+    grid-gap: 15px;
+    align-items: center;
+    margin: 0 30px 30px;
+    border-radius: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+}
+
+.Attendance .Courses .Content-Courses .Card-Courses {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    padding: 10px 0;
+    border-radius: 6px;
+    align-items: start;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+}
+
+.Attendance .Courses .Content-Courses .Card-Courses .Header-Card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Attendance .Courses .Content-Courses .Card-Courses .Header-Card p::selection {
+    background-color: transparent;
+}
+
+.Attendance .Courses .Content-Courses .Card-Courses .Header-Card p:nth-child(1) {
+    display: flex;
+    font-size: 10px;
+    color: #101010;
+    margin: 0 0 0 20px;
+    align-items: center;
+    justify-content: center;
+    font-family: MontserratSB;
+}
+
+.Attendance .Courses .Content-Courses .Card-Courses .Header-Card p:nth-child(2) {
+    display: flex;
+    font-size: 10px;
+    padding: 0 10px;
+    color: #A26840;
+    margin: 0 20px 0 0;
+    font-family: Petrov;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #FDBB2D;
+}
+
+.Attendance .Courses .Content-Courses .Card-Courses p::selection {
+    background-color: transparent;
+}
+
+.Attendance .Courses .Content-Courses .Card-Courses p:nth-child(2) {
+    font-size: 18px;
+    color: #101010;
+    margin: 0 0 0 20px;
+    font-family: Petrov;
+}
+
+/* INPUT & TABLE ATTENDANCE DESIGN */
+
+.Attendance .Attendance-List {
+    gap: 15px;
+    display: flex;
+    padding: 30px;
+}
+
+/* FORM INPUT DESIGN */
+
+.Attendance .Attendance-List .Form {
+    width: 25%;
+    height: 350px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px #C5C5C5;
+}
+
+.Attendance .Attendance-List .Form .Header-Form {
+    height: 25px;
+    display: flex;
+    font-size: 14px;
+    color: #101010;
+    align-items: center;
+    margin: 20px 25px 10px;
+    font-family: MontserratB;
+}
+
+
+.Attendance .Attendance-List .Form .Header-Form p::selection {
+    background-color: transparent;
+}
+
+.Attendance .Attendance-List .Form .Line-Form {
+    height: 2px;
+    margin: 0 25px;
+    background-color: #ECEDEC;
+}
+
+.Attendance .Attendance-List .Form .Content-Form {
+    display: flex;
+    align-items: start;
+    margin: 10px 25px 20px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Attendance .Attendance-List .Form .Content-Form .Input {
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.Attendance .Attendance-List .Form .Content-Form .Input input {
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    font-size: 10px;
+    margin-top: 15px;
+    color: #858585;
+    border-radius: 8px;
+    background: transparent;
+    font-family: MontserratM;
+    transition: all 0.5s ease;
+    border: 1.5px solid #ECEDEC;
+}
+
+.Attendance .Attendance-List .Form .Content-Form .Input input::selection {
+    background-color: transparent;
+}
+
+.Attendance .Attendance-List .Form .Content-Form .Input label {
+    top: 12px;
+    left: 10px;
+    padding: 0 5px;
+    font-size: 8px;
+    color: #101010;
+    position: absolute;
+    font-family: MontserratSB;
+    background-color: #FFFFFF;
+}
+
+.Attendance .Attendance-List .Form .Content-Form .Input label::selection {
+    background-color: transparent;
+}
+
+.Attendance .Attendance-List .Form .Content-Form .Choice-Chips-Group {
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    margin-top: 15px;
+    height: fit-content;
+    justify-content: space-between;
+}   
+.Attendance .Attendance-List .Form .Content-Form .Choice-Chip {
+    width: 100%;
+    height: 25px;
+}
+  
+.Attendance .Attendance-List .Form .Content-Form .Choice-Chip input[type="radio"] {
+    display: none;
+}
+
+.Attendance .Attendance-List .Form .Content-Form .Choice-Chip label {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    cursor: pointer;
+    font-size: 10px;
+    color: #101010;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    font-family: MontserratSB;
+    transition: all 0.25s ease;
+    background-color: transparent;
+    border: solid 1.5px #ECEDEC;
+}
+
+.Attendance .Attendance-List .Form .Content-Form .Choice-Chip label:hover {
+    border: solid 1.5px #C5C5C5;
+}
+
+.Attendance .Attendance-List .Form .Content-Form .Choice-Chip label p::selection {
+    background-color: transparent;
+}
+
+.Attendance .Attendance-List .Form .Content-Form .Choice-Chip [type="radio"]:checked + label {
+    color: #2C8A89;
+    background-color: #C5E7E8;
+    border: solid 1.5px #2C8A89;
+}
+
+.Attendance .Attendance-List .Form .Content-Form .Alert {
+    gap: 5px;
+    width: 100%;
+    display: flex;
+    font-size: 10px;
+    color: #A26840;
+    align-items: center;
+    margin: 15px 0 -10px 5px;
+    font-family: MontserratSB;
+}
+
+.Attendance .Attendance-List .Form .Content-Form .ButtonAttendance {
+    width: 100%;
+    border: none;
+    height: 30px;
+    cursor: pointer;
+    font-size: 10px;
+    color: #A26840;
+    margin-top: 20px;
+    border-radius: 6px;
+    letter-spacing: 0.25px;
+    font-family: MontserratB;
+    transition: all 0.5s ease;
+    background-color: #FDBB2D;
+}
+
+.Attendance .Attendance-List .Form .ButtonAttendance:hover {
+    color: #101010;
+    background-color: #E9A617;
+}
+
+.Attendance .Attendance-List .Form .ButtonAttendance:active {
+    color: #101010;
+    background-color: #E9A617;
+}
+
+.Attendance .Attendance-List .Form .ButtonAttendance::selection {
+    background-color: transparent;
+}
+
+/* TABLE ATTENDANCE DESIGN */
+
+.Attendance .Attendance-List .Table-Attendance {
+    width: 75%;
+    display: flex;
+    height: 350px;
+    border-radius: 10px;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px #C5C5C5;
+}
+
+.Attendance .Attendance-List .Table-Attendance p::selection {
+    background-color: transparent;
+}
+
+.Attendance .Attendance-List .Table-Attendance .Header-Table-Attendance {
+    display: flex;
+    align-items: center;
+    margin: 20px 25px 10px;
+    justify-content: space-between;
+}
+
+.Attendance .Attendance-List .Table-Attendance .Header-Table-Attendance p {
+    font-size: 14px;
+    color: #101010;
+    font-family: MontserratB;
+}
+
+.Attendance .Attendance-List .Table-Attendance .Header-Table-Attendance a {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    border-radius: calc(30px/5);
+    justify-content: flex-start;
+    background-color: #FDBB2D;
+}
+
+.Attendance .Attendance-List .Table-Attendance .Header-Table-Attendance a i {
+    width: 100%;
+    display: flex;
+    font-size: 12px;
+    color: #A26840;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.Attendance .Attendance-List .Table-Attendance .Header-Table-Attendance a p {
+    right: 0%;
+    width: 0%;
+    opacity: 0;   
+    font-size: 10px;
+    color: #101010;
+    position: absolute;
+    transition: all 0.5s ease;
+}
+
+.Attendance .Attendance-List .Table-Attendance .Header-Table-Attendance a:hover {
+    width: 85px;
+}
+
+.Attendance .Attendance-List .Table-Attendance .Header-Table-Attendance a:hover i {
+    width: 50%;
+    color: #101010;
+}
+
+.Attendance .Attendance-List .Table-Attendance .Header-Table-Attendance a:hover p {
+    width: 60%;
+    opacity: 1;
+}
+
+.Attendance .Attendance-List .Table-Attendance .Header-Table-Attendance a:active {
+    background-color: #E9A617;
+}
+
+.Attendance .Attendance-List .Table-Attendance .Line-Table-Attendance {
+    height: 2px;
+    margin: 0 25px;
+    background-color: #ECEDEC;
+}
+
+.Attendance .Attendance-List .Table-Attendance .Content-Table-Attendance {
+    height: 280px;
+    display: flex;
+    overflow: auto;
+    margin: 0 25px 20px;
+    flex-direction: column;
+}
+
+.Attendance .Attendance-List .Table-Attendance .Content-Table-Attendance::-webkit-scrollbar {
+    display: none;
+}
+
+.Attendance .Attendance-List .Table-Attendance .Content-Table-Attendance .Box-Attendance {
+    width: 100%;
+    display: flex;
+    padding: 14px 0;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px #EAEAEA;
+}
+
+.Attendance .Attendance-List .Table-Attendance .Content-Table-Attendance .Box-Attendance .Lines {
+    color: #C5C5C5;
+    width: fit-content;
+}
+
+.Attendance .Attendance-List .Table-Attendance .Content-Table-Attendance .Box-Attendance .Left {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.Attendance .Attendance-List .Table-Attendance .Content-Table-Attendance .Box-Attendance .Left .No {
+    width: 30px;
+    font-size: 12px;
+    color: #101010;
+    margin-right: 5px;
+    text-align: center;
+    font-family: MontserratSB;
+}
+
+.Attendance .Attendance-List .Table-Attendance .Content-Table-Attendance .Box-Attendance .Left .Info-User {
+    display: flex;
+    padding: 0 10px;
+    margin-left: 5px;
+    align-items: start;
+    flex-direction: column;
+}
+
+.Attendance .Attendance-List .Table-Attendance .Content-Table-Attendance .Box-Attendance .Left .Info-User p:nth-child(1) {
+    font-size: 12px;
+    color: #101010;
+    letter-spacing: 0.15px;
+    font-family: MontserratB;
+}
+
+.Attendance .Attendance-List .Table-Attendance .Content-Table-Attendance .Box-Attendance .Left .Info-User {
+    font-size: 10px;
+    color: #656565;
+    font-family: MontserratM;
+}
+
+.Attendance .Attendance-List .Table-Attendance .Content-Table-Attendance .Box-Attendance .Right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Attendance .Attendance-List .Table-Attendance .Content-Table-Attendance .Box-Attendance .Right p:nth-child(odd) {
+    width: 100%;
+    height: 18px;
+    display: flex;
+    font-size: 10px;
+    color: #101010;
+    align-items: center;
+    justify-content: center;
+    font-family: MontserratSB;
+}
+
+.Attendance .Attendance-List .Table-Attendance .Content-Table-Attendance .Box-Attendance .Right p:last-child {
+    width: 80%;
+    border-radius: 4px;
+    margin: 0 0 0 25px;
+}
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1000px) {
+    .Header .Navbar .Navbar-Right {
+        left: 0;
+        top: 35px;
+        opacity: 0;
+        z-index: -1;  
+        display: flex;
+        margin: 0 15px;
+        align-items: start;
+        position: absolute;
+        height: fit-content;
+        flex-direction: column;
+        padding: 40px 30px 25px;
+        transition: all 0.5s ease;
+        background-color: #141414;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 0 5px #101010;
+    }
+    .Header .Navbar .Navbar-Right a {
+        margin: 0 auto;
+    }
+    .Header .Navbar .Navbar-Right.Active {
+        top: 60px;
+        opacity: 1;
+    }
+    .Header .Navbar .Dropdown {
+        display: flex;
+    }
+    .Header .Navbar .Dropdown.Active i {
+        color: #FDBB2D;
+    }
+    .Attendance .Attendance-List {
+        flex-wrap: wrap;
+    }
+    .Attendance .Attendance-List .Form {
+        width: 100%;
+    }
+    .Attendance .Attendance-List .Table-Attendance {
+        width: 100%;
+    }
+}

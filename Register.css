@@ -1,0 +1,391 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background-color: #FFFFFF;
+    background-repeat: no-repeat;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* IMPORT FONT */
+
+@font-face {
+    font-family: NexaE;
+    src: url(./Font/Nexa-ExtraLight.ttf);
+}
+@font-face {
+    font-family: NexaH;
+    src: url(./Font/Nexa-Heavy.ttf);
+}
+@font-face {
+    font-family: MontserratR;
+    src: url(./Font/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: MontserratM;
+    src: url(./Font/Montserrat-Medium.ttf);
+}
+@font-face {
+    font-family: MontserratSB;
+    src: url(./Font/Montserrat-SemiBold.ttf);
+}
+@font-face {
+    font-family: MontserratB;
+    src: url(./Font/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: Creato-Regular;
+    src: url(./Font/CreatoDisplay-Regular.otf);
+}
+@font-face {
+    font-family: Creato-Medium;
+    src: url(./Font/CreatoDisplay-Medium.otf);
+}
+@font-face {
+    font-family: Creato-Bold;
+    src: url(./Font/CreatoDisplay-Bold.otf);
+}
+@font-face {
+    font-family: Creato-ExtraBold;
+    src: url(./Font/CreatoDisplay-ExtraBold.otf);
+}
+@font-face {
+    font-family: Creato-RegularItalic;
+    src: url(./Font/CreatoDisplay-RegularItalic.otf);
+}
+@font-face {
+    font-family: Creato-MediumItalic;
+    src: url(./Font/CreatoDisplay-MediumItalic.otf);
+}
+@font-face {
+    font-family: Creato-BoldItalic;
+    src: url(./Font/CreatoDisplay-BoldItalic.otf);
+}
+@font-face {
+    font-family: Creato-ExtraBoldItalic;
+    src: url(./Font/CreatoDisplay-ExtraBoldItalic.otf);
+}
+@font-face {
+    font-family: Sephora;
+    src: url(./Font/Sephora.ttf);
+}
+@font-face {
+    font-family: SephoraB;
+    src: url(./Font/Sephora-Bold.ttf);
+}
+@font-face {
+    font-family: Quantify;
+    src: url(./Font/Quantify.ttf);
+}
+@font-face {
+    font-family: Petrov;
+    src: url(./Font/PetrovSans-Bold.ttf);
+}
+
+/* LOGO DESIGN */
+
+.Logo {
+    top: 0;
+    gap: 10px;
+    display: none;
+    padding: 25px 30px;
+    position: absolute;
+}
+
+.Logo p {
+    font-size: 18px;
+    font-family: Sephora;
+    letter-spacing: 0.5px;
+    background: -webkit-linear-gradient(0deg, #22C1C3, #FDBB2D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* LOGIN DESIGN */
+
+.Register {
+    width: 100%;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LOGIN LEFT DESIGN */
+
+.Register .Register-Left {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 16px 16px 0;
+    /* LOGIN LEFT BACKGROUND */
+    --s: 150px;
+    --c1: #191919;
+    --c2: #101010;
+    --_g: var(--c1) 0% 5%, var(--c2) 6% 15%, var(--c1) 16% 25%, var(--c2) 26% 35%,
+    var(--c1) 36% 45%, var(--c2) 46% 55%, var(--c1) 56% 65%, var(--c2) 66% 75%,
+    var(--c1) 76% 85%, var(--c2) 86% 95%, #0000 96%;
+    background: radial-gradient(50% 50% at 100% 0, var(--_g)),
+    radial-gradient(50% 50% at 0 100%, var(--_g)),
+    radial-gradient(50% 50%, var(--_g)),
+    radial-gradient(50% 50%, var(--_g)) calc(var(--s) / 2) calc(var(--s) / 2)var(--c1);
+    background-size: var(--s) var(--s);
+    box-shadow: 0 0 5px #101010;
+}
+
+.Register .Register-Left .Content-Login-Left {
+    gap: 10px;
+    width: 60%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+.Register .Register-Left .Content-Login-Left p:nth-child(1) {
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+    font-family: MontserratM;
+}
+
+.Register .Register-Left .Content-Login-Left p:nth-child(2) {
+    font-size: 48px;
+    letter-spacing: 0.5px;
+    font-family: MontserratB;
+    background: -webkit-linear-gradient(0deg, #22C1C3 10%, #FDBB2D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Register .Register-Left .Content-Login-Left p:nth-child(3) {
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+    font-family: MontserratM;
+}
+
+.Register .Register-Left .Content-Login-Left p::selection {
+    background-color: transparent;
+}
+
+/* LOGIN RIGHT DESIGN */
+
+.Register .Register-Right {
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Register .Register-Right .Header {
+    width: 100%;
+    height: 60px;
+}
+
+.Register .Register-Right .Content {
+    width: 40%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Register .Register-Right .Content .Header-Content {
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    margin-bottom: 25px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Register .Register-Right .Content .Header-Content p:nth-child(1) {
+    font-size: 24px;
+    color: #101010;
+    font-family: MontserratB;
+}
+
+.Register .Register-Right .Content .Header-Content p:nth-child(2) {
+    font-size: 10px;
+    color: #656565;
+    font-family: MontserratSB;
+}
+
+.Register .Register-Right .Content .Header-Content p::selection {
+    background-color: transparent;
+}
+
+.Register .Register-Right .Content .Form {
+    width: 100%;
+    display: flex;  
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Register .Register-Right .Content .Form .Input {
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.Register .Register-Right .Content .Form .Input input {
+    width: 100%;
+    height: 35px;
+    padding: 0 15px;
+    font-size: 10px;
+    margin-top: 15px;
+    color: #101010;
+    border-radius: 8px;
+    background: transparent;
+    font-family: MontserratM;
+    transition: all 0.25s ease;
+}
+
+.Register .Register-Right .Content .Form .Input:nth-child(4) input {
+    text-transform: lowercase;
+}
+
+.Register .Register-Right .Content .Form .Input input:focus {
+    outline: none;
+}
+
+.Register .Register-Right .Content .Form .Input label {
+    top: 10px;
+    left: 10px;
+    padding: 0 5px;
+    font-size: 10px;
+    color: #101010;
+    position: absolute;
+    font-family: MontserratSB;
+    background-color: #FFFFFF;
+}
+
+.Register .Register-Right .Content .Form .Input label::selection {
+    background-color: transparent;
+}
+
+.Register .Register-Right .Content .Form .AlertPassword {
+    gap: 5px;
+    opacity: 0;
+    display: flex;
+    font-size: 8px;
+    color: #DA0605;
+    align-items: center;
+    padding: 5px 10px 0;
+    font-family: MontserratSB;
+}
+
+.Register .Register-Right .Content .Form .registerButton {
+    width: 100%;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    font-size: 10px;
+    margin-top: 10px;
+    color: #FFFFFF;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+    font-family: MontserratSB;
+    transition: all 0.5s ease;
+    background-color: #101010;
+}
+
+.Register .Register-Right .Content .Form .registerButton:hover {
+    color: #FDBB2D;
+    box-shadow: 0 0 10px #656565;
+}
+
+.Register .Register-Right .Content .Form .registerButton:focus-within {
+    outline: none;
+    box-shadow: 0 0 5px #656565;
+}
+.Register .Register-Right .Content .Form .registerButton::selection {
+    background-color: transparent;
+}
+
+.Register .Register-Right .Content .Form .BacktoDashboard {
+    gap: 5px;
+    width: 100%;
+    display: flex;
+    padding: 15px 0;
+    font-size: 10px;
+    color: #101010;
+    align-items: center;
+    justify-content: center;
+    font-family: MontserratSB;
+}
+
+.Register .Register-Right .Content .Form .BacktoDashboard a {
+    color: #101010;
+    text-decoration: none;
+    font-family: MontserratSB;
+    transition: all 0.5s ease;
+}
+
+.Register .Register-Right .Content .Form .BacktoDashboard a:hover {
+    color: #FDBB2D;
+}
+
+.Register .Register-Right .Footer {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Register .Register-Right .Footer p {
+    font-size: 10px;
+    color: #656565;
+    letter-spacing: 0.15px;
+    font-family: MontserratM;
+}
+
+.Register .Register-Right .Footer p::selection {
+    background-color: transparent;
+}
+
+@media only screen and (max-width:1000px) {
+    .Logo {
+        display: flex;
+        align-items: center;
+    }
+    .Login {
+        flex-wrap: wrap;
+    }
+    .Login .Login-Left {
+        display: none;
+    }
+    .Login .Login-Right .Content {
+        width: 80%;
+    }
+    .Login .Login-Right .Content .Header-Content {
+        width: 90%;
+    }
+    .Login .Login-Right .Content-Login-Right p:nth-child(2) {
+        font-size: 8px;
+    }
+    .Login .Login-Right .Content-Login-Right .Box-Input input {
+        font-size: 10px;
+    }
+    .Login .Login-Right .Content-Login-Right .Alert {
+        font-size: 8px;
+    }
+}
